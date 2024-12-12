@@ -162,6 +162,7 @@ body {
 
 .somaire {
   height: 100vh;
+  display: flex;
 }
 
 .somaire, .somaire a {
@@ -183,6 +184,10 @@ body {
 
 .somaire h3 {
   font-size: 5vh;
+}
+
+.somaire ul {
+  justify-items: center;
 }
 
 .passions {
@@ -240,73 +245,46 @@ body {
   background-image: url(../images/passion.jpg);
  }
   
- .general {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  align-items: center;
-  color: #cecece;
-  font-family: "Comic Neue", cursive;
-  font-style: normal;
-  word-spacing: 1px;
-  transition: all 0.3s;
-}
-
-.general h2 {
-  font-size: 7vh;
+ .general .bouton {
+  width: 100%; /* Assure que le conteneur prend toute la largeur */
+  max-width: 800px; /* Largeur maximale */
+  margin: 0 auto; /* Centrage */
 }
 
 .general .bouton a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 10vh;
-  width: 90vh;
+  display: block; /* Permet de prendre toute la largeur */
+  width: 100%;
   background-color: #cecece;
-  margin-top: 5vh;
   color: #111;
+  padding: 15px;
+  text-align: center;
   cursor: pointer;
-}
-
-.general .bouton a::after {
-  content: '▼';
-  position: absolute;
-  right: 20px;
-  transition: transform 0.3s ease;
-}
-
-.general .bouton a.active::after {
-  transform: rotate(180deg);
+  white-space: nowrap; /* Empêche le texte de se diviser */
+  overflow: hidden; /* Cache le débordement */
+  text-overflow: ellipsis; /* Ajoute des points de suspension si trop long */
+  margin-top: 10vh;
 }
 
 .texte_hidden {
+  width: 100%; /* Même largeur que le parent */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
   background-color: #f9f9f9;
   opacity: 0;
-  width: 100%;
-  box-sizing: border-box;
+  word-wrap: break-word; /* Coupe les mots trop longs */
+  overflow-wrap: break-word; /* Alternative pour certains navigateurs */
 }
 
 .general .bouton a.active + .texte_hidden {
-  max-height: 300px; /* Ajustez selon la quantité de contenu */
+  max-height: fit-content; /* Hauteur adaptable */
   opacity: 1;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ddd;
 }
 
+.texte_hidden p, 
 .texte_hidden li {
-  list-style-type: none;
-  padding: 5px 0;
-  text-align: center;
-}
-.general .bouton a {
-  width: 90vh;
-  display: flex;
-  height: 10vh;
-  background-color: #cecece;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
