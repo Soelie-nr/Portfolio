@@ -1,0 +1,31 @@
+/* ===== FOOTER ===== */
+footer {
+    height: auto;
+    width: 100%;
+    margin-bottom: auto;
+    margin-top: auto;
+    background-color: #3333331f;
+  }
+  
+  /* Style des éléments du footer */
+  .ElementFooter { 
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style des liens dans le footer */
+  .ElementFooter a {
+    border-radius: 2.5px;
+    padding-left: 5vh;
+    text-decoration: none;
+    align-items: center;
+    padding-top: auto;
+  }
+  
+  /* Animation au survol des liens du footer */
+  .ElementFooter a:hover {
+    transform: scale(1.1);
+  }

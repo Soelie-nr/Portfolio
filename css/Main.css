@@ -1,0 +1,312 @@
+body {
+    margin: auto;
+    padding: auto;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+  }
+
+
+  .backgroundMain, .backgroundPassions{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Style du fond de la section Background */
+  .backgroundMain{
+    background-image: url(../images/Background.jpg);
+  }
+
+  .backgroundPassions {
+    background-image: url(../images/passion.jpg) ;
+  }
+  
+  /* Style des titres principaux */
+  h1 {
+    text-align: center;
+    justify-items: center;
+    font-size: 15vh;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    box-sizing: border-box;
+  }
+  
+  /* Style des titres secondaires */
+  h2 {
+    text-align: center;
+    font-size: 5vh;
+    color: #cecece;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  /* ===== CARROUSEL ===== */
+  /* Configuration de la section du carrousel */
+  .section {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container du slider */
+  .slider {
+    width: 100%;
+    height: 100%;
+    border-radius: 5vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Container des slides */
+  .slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: 0.5s ease;
+  }
+  
+  /* Style des slides individuels */
+  .st {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Style des images dans les slides */
+  .st img {
+    width: 100vh;
+    height: 100vh;
+    object-fit: contain;
+  }
+  
+  /* Masquage des boutons radio */
+  input[name="radio-btn"] {
+    display: none;
+  }
+  
+  /* Navigation du carrousel */
+  .nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  /* Style des boutons de navigation */
+  .nav-btn {
+    border: 0.5vh solid #fff;
+    padding: 1vh;
+    border-radius: 50%;
+    transition: 1s;
+    cursor: pointer;
+    margin: 0 1vh;
+  }
+  
+  /* Contrôle du déplacement des slides */
+  #radio1:checked ~ .slides { margin-left: 0; }
+  #radio2:checked ~ .slides { margin-left: -100%; }
+  #radio3:checked ~ .slides { margin-left: -200%; }
+  #radio4:checked ~ .slides { margin-left: -300%; }
+  
+  /* Mise en évidence du bouton actif */
+  #radio1:checked ~ .nav .nav-btn:nth-child(1),
+  #radio2:checked ~ .nav .nav-btn:nth-child(2),
+  #radio3:checked ~ .nav .nav-btn:nth-child(3),
+  #radio4:checked ~ .nav .nav-btn:nth-child(4),
+  .nav-btn:hover {
+    background-color: #111;
+  }
+  
+  /* ===== SECTION PRÉSENTATION ===== */
+.pharagraphes, .pharagraphes a{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 75%;
+    margin: auto;
+    align-items: center;
+    padding-top: auto;
+    padding-bottom: 5vh;
+    color: #cecece;
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: 2.5vh;
+    text-align: center;
+    word-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+.pharagraphes a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.somaire {
+  height: 100vh;
+}
+
+.somaire, .somaire a {
+  display: flex;
+  flex-direction: column;
+  color: #cecece;
+  padding-left: 2.5vh;
+  text-decoration: none;
+}
+
+.somaire a{
+  padding-top: 5vh;
+}
+
+.somaire a:hover{
+  text-decoration: underline;
+  color: black;
+}
+
+.somaire h3 {
+  font-size: 5vh;
+}
+
+.passions {
+  display: flex;
+  gap: 5vh; /* permet d'espacer les éléments*/
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 10vh;
+  }
+
+  /* formaatage des ancres ce sont des réctangles qui s'adaptes selon la taille de l'écran */
+.passions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vh;
+  height: 50vh;
+  gap: 5vh;
+  background-color: #333;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: black;
+  border-radius: 5px;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  text-decoration: none;
+  transition: all 0.5s; /*pour que le hover soit plus fluide*/
+}
+
+.passions a:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+  border-radius: 5%;
+ }
+
+ .parcour {
+  background-image: url(../images/parcour.jpg);
+ }
+
+ .activité {
+  background-image: url(../images/activité.jpg);
+ }
+
+ .projet {
+  background-image: url(../images/projet.jpg);
+ }
+
+ .passion {
+  background-image: url(../images/passion.jpg);
+ }
+  
+ .general {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  color: #cecece;
+  font-family: "Comic Neue", cursive;
+  font-style: normal;
+  word-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.general h2 {
+  font-size: 7vh;
+}
+
+.general .bouton a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 10vh;
+  width: 90vh;
+  background-color: #cecece;
+  margin-top: 5vh;
+  color: #111;
+  cursor: pointer;
+}
+
+.general .bouton a::after {
+  content: '▼';
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.general .bouton a.active::after {
+  transform: rotate(180deg);
+}
+
+.texte_hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  background-color: #f9f9f9;
+  opacity: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.general .bouton a.active + .texte_hidden {
+  max-height: 300px; /* Ajustez selon la quantité de contenu */
+  opacity: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.texte_hidden li {
+  list-style-type: none;
+  padding: 5px 0;
+  text-align: center;
+}
+.general .bouton a {
+  width: 90vh;
+  display: flex;
+  height: 10vh;
+  background-color: #cecece;
+  align-items: center;
+  justify-content: center;
+}
